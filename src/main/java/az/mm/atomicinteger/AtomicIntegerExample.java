@@ -58,7 +58,7 @@ public class AtomicIntegerExample {
     private Runnable sendRequest(int i) {
         return () -> {
             String id = fixedValue + counter.incrementAndGet();  // we need unique id
-            System.out.printf("Request number: %5s  |  OrderId: [%s]  |  %s\n", i, id, LocalTime.now());
+            System.out.printf("Request number: %5s  |  OrderId: [%s]  |  %s\n", i, id, LocalTime.now()); //you can call your service here
             numberOfResponse.incrementAndGet();
         };
     }
