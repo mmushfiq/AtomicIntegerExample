@@ -81,7 +81,7 @@ public class AtomicIntegerExample {
     
     private void saveLastNumber() {
         try(PrintWriter writer = new PrintWriter("src/main/resources/number.txt"); ) {
-            int lastNumber = counter.incrementAndGet();
+            int lastNumber = counter.get();
             writer.print(lastNumber);
             System.out.println("saved last number: " + lastNumber);
         } catch (FileNotFoundException ex) {
